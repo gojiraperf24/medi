@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>MediKiosk — Health check-in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="topbar-mark" aria-hidden="true">+</span>
+      <span>MediKiosk</span>
+    </div>
+    <div class="topbar-controls">
+      <label class="lang-label" for="lang-select">Language</label>
+      <select id="lang-select" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="hi">हिंदी (Hindi)</option>
+      </select>
+      <button id="mute-btn" class="icon-btn" type="button" aria-pressed="false">
+        <span id="mute-icon" aria-hidden="true">🔊</span>
+        <span class="sr-only" id="mute-label">Voice guidance on</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="app-shell">
+    <div class="progress-track" id="progress-track" role="list" aria-label="Check-in progress"></div>
+    <section id="screen" class="card" aria-live="polite"></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
