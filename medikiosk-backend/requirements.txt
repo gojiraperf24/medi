@@ -1,0 +1,19 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.6
+sqlalchemy>=2.0.35
+pydantic>=2.9.2
+pydantic-settings>=2.5.2
+pyjwt>=2.9.0
+python-multipart>=0.0.9
+requests>=2.32.3
+
+# Optional — only needed if you run app/services/mqtt_bridge.py against a
+# real Mosquitto broker with physical hardware. Comment out if you don't
+# have this project's hardware and pip complains about it.
+paho-mqtt>=2.1.0
+
+# Optional — ONLY needed if you switch DATABASE_URL to postgresql://.
+# Left out by default: it requires a C compiler on Windows and the default
+# SQLite setup doesn't need it at all. Uncomment (and install Postgres)
+# if/when you move off SQLite:
+# psycopg2-binary>=2.9.9
